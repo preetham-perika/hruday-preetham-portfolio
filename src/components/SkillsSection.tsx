@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Code,
@@ -12,24 +12,26 @@ import {
   CheckCircle2,
   Wrench,
 } from "lucide-react";
-import { RESUME_DATA, SkillGroup } from "@/data/resume-data";
+import { RESUME_DATA } from "@/data/resume-data";
 
 export function SkillsSection() {
   const [filter, setFilter] = useState<string>("all");
 
-  const filterTabs = [
-    { id: "all", label: "All Skills" },
-    { id: "backend", label: "Backend & Core" },
-    { id: "frontend", label: "Frontend & UI" },
-    { id: "data", label: "Messaging & DB" },
-    { id: "cloud", label: "Cloud & DevOps" },
-    { id: "testing", label: "Testing & AI" },
-  ];
+  const filterTabs = useMemo(() => {
+    return [
+      { id: "all", label: "All Skills" },
+      { id: "backend", label: "Backend & Core" },
+      { id: "frontend", label: "Frontend & UI" },
+      { id: "data", label: "Messaging & DB" },
+      { id: "cloud", label: "Cloud & DevOps" },
+      { id: "testing", label: "Testing & AI" },
+    ];
+  }, []);
 
-  const filteredGroups = RESUME_DATA.skillGroups.filter((group) => {
-    if (filter === "all") return true;
-    return group.category === filter;
-  });
+  const filteredGroups = useMemo(() => {
+    if (filter === "all") return RESUME_DATA.skillGroups;
+    return RESUME_DATA.skillGroups.filter((group) => group.category === filter);
+  }, [filter]);
 
   const getCategoryIcon = (id: string) => {
     switch (id) {
@@ -67,12 +69,12 @@ export function SkillsSection() {
           <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
             Full-Stack Skill Matrix
           </h3>
-          <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
+          <p className="text-sm text-slate-600 dark:text-slate-300 mt-1">
             Production-grade competencies in modern Java microservices, event streaming, and reactive frontends
           </p>
         </div>
 
-        {/* Filter Pills */}
+        {/* Dynamic Filter Pills */}
         <div className="flex flex-wrap items-center gap-1.5 p-1 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 print:hidden">
           {filterTabs.map((tab) => (
             <button
@@ -81,7 +83,7 @@ export function SkillsSection() {
               className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
                 filter === tab.id
                   ? "bg-white dark:bg-slate-800 text-blue-600 dark:text-blue-400 shadow-sm"
-                  : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white"
+                  : "text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white"
               }`}
             >
               {tab.label}
@@ -92,15 +94,15 @@ export function SkillsSection() {
 
       {/* Skills Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        <AnimatePresence mode="popLayout">
-          {filteredGroups.map((group, idx) => (
+        <AnimatePresence mode="popLayout" initial={false}>
+          {filteredGroups.map((group) => (
             <motion.div
               layout
               key={group.id}
-              initial={{ opacity: 0, y: 15 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95 }}
-              transition={{ duration: 0.35, delay: idx * 0.04 }}
+              transition={{ duration: 0.2 }}
               className="p-5 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-800/80 backdrop-blur-md hover:border-blue-500/40 hover:shadow-md transition-all group"
             >
               <div className="flex items-center gap-2 mb-3.5">

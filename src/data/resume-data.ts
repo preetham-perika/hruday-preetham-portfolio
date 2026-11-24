@@ -142,34 +142,6 @@ export const RESUME_DATA = {
 
   projects: [
     {
-      id: "whatsapp-vault",
-      title: "Family WhatsApp Document & Picture Vault",
-      subtitle: "Personal Full-Stack Cloud-Native Showcase",
-      category: "fullstack",
-      type: "Full-Stack Project",
-      scopeBadge: "Personal Showcase • React + Java 21",
-      techStack: [
-        "Java 21",
-        "Spring Boot 3",
-        "React.js",
-        "Meta WhatsApp Cloud API",
-        "Docker Compose",
-        "Kubernetes (k8s)",
-        "Google Drive Sync",
-        "H2 / PostgreSQL",
-        "JUnit 5",
-      ],
-      highlights: [
-        "Architected an end-to-end full-stack document & media vault connecting Meta's official WhatsApp Cloud API with a Spring Boot 3 backend and a React.js administrative dashboard.",
-        "Engineered strict Indian phone number normalization (+91 only), unique whitelist verification, and dynamic personal vault provisioning on Google Drive.",
-        "Implemented multi-channel master admin approval workflows with instant Email notifications and WhatsApp action commands (/approve, /reject) alongside user visual analytics (GET /api/analytics).",
-        "Containerized with Docker Compose and authored production-ready Kubernetes deployment manifests (Deployment, Service, Ingress) with zero external software licensing fees.",
-      ],
-      githubUrl: "https://github.com/preetham-perika/chat-bot",
-      architectureFlow:
-        "Meta WhatsApp Webhook ➔ Spring Boot 3 Gateway ➔ Whitelist & Security ➔ Drive Sync ➔ React Admin GUI",
-    },
-    {
       id: "bsnl-commission",
       title: "BSNL Commission & Financial Retail Management System",
       subtitle: "MNP & Postpaid CAF Activations Platform",
@@ -199,7 +171,7 @@ export const RESUME_DATA = {
     },
     {
       id: "bsnl-sim-inventory",
-      title: "BSNL SIM Inventory Management Platform (PYOTA-USIM)",
+      title: "BSNL SIM Inventory Management Platform",
       subtitle: "Modernized SIM Lifecycle & Inventory Allocation System",
       category: "fullstack",
       type: "Enterprise Full-Stack",
@@ -235,10 +207,39 @@ export const RESUME_DATA = {
       techStack: ["Java", "Spring Boot", "REST APIs", "SMPP", "SS7", "MySQL", "SFTP"],
       highlights: [
         "Integrated Content Partner platforms with CVPS and Consent Gateway to orchestrate subscriber consent validation, VAS activation, auto-renewal, and fallback billing across SMS, USSD, IVR, and Web/WAP channels.",
+        "Engineered robust SMPP and SS7 USSD session handling with connection pooling, maintaining sub-50ms transaction latency under burst telecom activation spikes.",
         "Reduced billing failures by ~40% through asynchronous callback handling and retry mechanisms, and automated daily CDR reconciliation via SFTP, cutting manual operations effort by ~60%.",
       ],
       architectureFlow:
         "Content Partners ➔ SMPP / SS7 / REST ➔ Consent Gateway ➔ Fallback Billing Engine ➔ MySQL ➔ SFTP CDR",
+    },
+    {
+      id: "whatsapp-vault",
+      title: "Family WhatsApp Document & Picture Vault",
+      subtitle: "Personal Full-Stack Cloud-Native Showcase",
+      category: "fullstack",
+      type: "Full-Stack Project",
+      scopeBadge: "Personal Showcase • React + Java 21",
+      techStack: [
+        "Java 21",
+        "Spring Boot 3",
+        "React.js",
+        "Meta WhatsApp API",
+        "Docker",
+        "Kubernetes",
+        "Google Drive API",
+        "PostgreSQL",
+        "JUnit 5",
+      ],
+      highlights: [
+        "Architected an end-to-end full-stack document & media vault connecting Meta's official WhatsApp Cloud API with a Spring Boot 3 backend and a React.js administrative dashboard.",
+        "Engineered strict Indian phone number normalization (+91 only), unique whitelist verification, and dynamic personal vault provisioning on Google Drive.",
+        "Implemented multi-channel master admin approval workflows with instant Email notifications and WhatsApp action commands (/approve, /reject) alongside user visual analytics (GET /api/analytics).",
+        "Containerized with Docker Compose and authored production-ready Kubernetes deployment manifests (Deployment, Service, Ingress) with zero external software licensing fees.",
+      ],
+      githubUrl: "https://github.com/preetham-perika/chat-bot",
+      architectureFlow:
+        "Meta WhatsApp Webhook ➔ Spring Boot 3 Gateway ➔ Whitelist & Security ➔ Drive Sync ➔ React Admin GUI",
     },
   ] as Project[],
 

@@ -1,20 +1,18 @@
 #!/usr/bin/env bash
 # ==============================================================================
 # Next.js Dynamic ATS Resume PDF Generator
-# Serves static export via HTTP & compiles vector ATS PDF using Chrome Headless
+# Compiles static export via HTTP & renders vector ATS PDF using Chrome Headless
 # ==============================================================================
 
 set -e
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 OUTPUT_PDF="$SCRIPT_DIR/Sri_Hruday_Preetham_Perika_Java_Full_Stack_2026.pdf"
+PUBLIC_PDF="$SCRIPT_DIR/public/Sri_Hruday_Preetham_Perika_Java_Full_Stack_2026.pdf"
 OUT_DIR="$SCRIPT_DIR/out"
 
-# Check if build output exists, if not build it
-if [ ! -f "$OUT_DIR/index.html" ]; then
-  echo "📦 Running 'npm run build' to generate static export..."
-  cd "$SCRIPT_DIR" && npm run build
-fi
+echo "📦 Running 'npm run build' to generate static export..."
+cd "$SCRIPT_DIR" && npm run build
 
 # Find available port
 PORT=3987
@@ -53,5 +51,11 @@ echo "📄 Compiling vector ATS Resume PDF from http://localhost:$PORT..."
 "$CHROME_BIN" --headless --disable-gpu --no-pdf-header-footer \
   --print-to-pdf="$OUTPUT_PDF" "http://localhost:$PORT"
 
-echo "✅ PDF successfully generated: $OUTPUT_PDF"
-ls -lh "$OUTPUT_PDF"
+# Ensure public/ directory exists and copy PDF for direct browser downloads
+mkdir -p "$SCRIPT_DIR/public"
+cp "$OUTPUT_PDF" "$PUBLIC_PDF"
+
+echo "✅ PDF successfully generated:"
+echo "   - Workspace: $OUTPUT_PDF"
+echo "   - Public:    $PUBLIC_PDF"
+pdfinfo "$OUTPUT_PDF" | grep "Pages:"

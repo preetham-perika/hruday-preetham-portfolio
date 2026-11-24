@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
 import { GraduationCap, Award, CheckCircle } from "lucide-react";
 import { RESUME_DATA } from "@/data/resume-data";
 
@@ -24,13 +23,7 @@ export function EducationSection() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         {/* Education Card */}
-        <motion.div
-          initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="p-6 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-800/80 backdrop-blur-md"
-        >
+        <div className="p-6 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-800/80 backdrop-blur-md">
           <div className="flex items-center gap-2.5 mb-3">
             <span className="p-2 rounded-lg bg-blue-500/10 text-blue-600 dark:text-blue-400">
               <GraduationCap size={20} />
@@ -50,16 +43,10 @@ export function EducationSection() {
           <span className="inline-block px-2.5 py-1 rounded-md text-xs font-bold bg-slate-100 dark:bg-slate-800 text-blue-600 dark:text-blue-400 border border-slate-200 dark:border-slate-700">
             Cumulative GPA: {education.gpa}
           </span>
-        </motion.div>
+        </div>
 
         {/* Certifications Card */}
-        <motion.div
-          initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="p-6 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-800/80 backdrop-blur-md"
-        >
+        <div className="p-6 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-800/80 backdrop-blur-md">
           <div className="flex items-center gap-2.5 mb-3">
             <span className="p-2 rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
               <Award size={20} />
@@ -87,7 +74,7 @@ export function EducationSection() {
               </li>
             ))}
           </ul>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

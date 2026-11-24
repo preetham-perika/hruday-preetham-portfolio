@@ -7,7 +7,6 @@ import { SkillsSection } from "@/components/SkillsSection";
 import { ExperienceSection } from "@/components/ExperienceSection";
 import { EducationSection } from "@/components/EducationSection";
 import { Footer } from "@/components/Footer";
-import { FloatingResumeButton } from "@/components/FloatingResumeButton";
 import { AtsResumePrint } from "@/components/AtsResumePrint";
 
 export default function Home() {
@@ -34,8 +33,6 @@ export default function Home() {
           <EducationSection />
           <Footer />
         </main>
-
-        <FloatingResumeButton />
       </div>
 
       {/* ATS PRINT RESUME (Active only during Print / PDF generation) */}

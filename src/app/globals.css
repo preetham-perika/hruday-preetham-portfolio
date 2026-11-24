@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @layer base {
   :root {
     --background: #f8fafc;
@@ -38,6 +40,16 @@ body {
   transition: background-color 0.25s ease, color 0.25s ease;
 }
 
+/* Ensure headings in dark mode are always bright white */
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6 {
+  color: #ffffff;
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
@@ -53,18 +65,59 @@ body {
   background: rgba(148, 163, 184, 0.7);
 }
 
+/* Smooth GPU Keyframe Animations (60fps, Accessible) */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.45s ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Hide Next.js dev indicator ("N" badge) */
+nextjs-portal,
+[data-nextjs-dev-overlay] {
+  display: none !important;
+  visibility: hidden !important;
+}
+
 /* Print Styles for ATS Vector Resume */
 @media print {
   @page {
     size: A4 portrait;
-    margin: 5mm 8mm;
+    margin: 6mm 8mm;
   }
 
   html, body {
     background: #ffffff !important;
     color: #000000 !important;
+    font-family: Arial, Helvetica, sans-serif !important;
     padding: 0 !important;
     margin: 0 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Ensure all printed resume text is crisp black, never white */
+  .print-content,
+  .print-content * {
+    color: #000000 !important;
   }
 
   div.web-content,
@@ -84,6 +137,11 @@ body {
     height: auto !important;
     max-height: none !important;
     overflow: visible !important;
+  }
+
+  .break-inside-avoid {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
   }
 }
 

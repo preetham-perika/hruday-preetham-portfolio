@@ -1,36 +1,23 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
-import { Sparkles, Terminal } from "lucide-react";
+import { Terminal } from "lucide-react";
 import { RESUME_DATA } from "@/data/resume-data";
 
 export function ProfessionalSummary() {
   return (
     <section id="summary" className="py-12 border-b border-slate-200/80 dark:border-slate-800/80">
-      <motion.div
-        initial={{ opacity: 0, y: 15 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-        className="flex items-center gap-2 mb-4"
-      >
+      <div className="flex items-center gap-2 mb-4">
         <span className="p-1 rounded-md bg-blue-500/10 text-blue-600 dark:text-blue-400">
           <Terminal size={18} />
         </span>
-        <h2 className="text-xl font-bold tracking-tight text-slate-900 dark:text-white uppercase text-xs tracking-widest text-slate-500 dark:text-slate-400">
+        <h2 className="text-xs font-bold tracking-widest text-slate-500 dark:text-slate-400 uppercase">
           Professional Summary
         </h2>
-      </motion.div>
+      </div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 15 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: 0.1 }}
-        className="relative p-6 sm:p-7 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-800/80 border-l-4 border-l-blue-600 dark:border-l-blue-500 shadow-sm backdrop-blur-md"
-      >
-        <p className="text-slate-700 dark:text-slate-300 text-base sm:text-[17px] leading-relaxed">
+      <div className="relative p-6 sm:p-7 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-800/80 border-l-4 border-l-blue-600 dark:border-l-blue-500 shadow-sm backdrop-blur-md">
+        <p className="text-slate-700 dark:text-slate-200 text-base sm:text-[17px] leading-relaxed">
           <strong className="text-slate-900 dark:text-white font-semibold">
             Java Full-Stack Developer
           </strong>{" "}
@@ -63,7 +50,7 @@ export function ProfessionalSummary() {
           ) to accelerate feature delivery and automated test coverage with zero
           critical SonarQube issues.
         </p>
-      </motion.div>
+      </div>
     </section>
   );
 }

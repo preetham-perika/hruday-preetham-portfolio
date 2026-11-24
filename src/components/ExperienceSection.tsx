@@ -1,8 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
-import { Briefcase, Building2, Calendar, MapPin, CheckCircle } from "lucide-react";
+import { Briefcase, Building2, Calendar, MapPin } from "lucide-react";
 import { RESUME_DATA } from "@/data/resume-data";
 
 export function ExperienceSection() {
@@ -22,13 +21,7 @@ export function ExperienceSection() {
         Work Experience
       </h3>
 
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-        className="relative p-6 sm:p-7 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-800/80 border-l-4 border-l-blue-600 dark:border-l-blue-500 shadow-sm backdrop-blur-md"
-      >
+      <div className="relative p-6 sm:p-7 rounded-2xl bg-white/70 dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-800/80 border-l-4 border-l-blue-600 dark:border-l-blue-500 shadow-sm backdrop-blur-md">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4 pb-3 border-b border-slate-200/60 dark:border-slate-800/60">
           <div>
             <h4 className="text-xl font-bold text-slate-900 dark:text-white">
@@ -59,7 +52,7 @@ export function ExperienceSection() {
             </li>
           ))}
         </ul>
-      </motion.div>
+      </div>
     </section>
   );
 }

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Mail, Phone, FileText, ArrowUp } from "lucide-react";
+import { Mail, Phone, FileText, ArrowUp, Download } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "@/components/Icons";
 import { RESUME_DATA } from "@/data/resume-data";
 
@@ -81,20 +81,12 @@ export function Footer() {
             <GithubIcon size={15} />
             <span>GitHub Profile</span>
           </a>
-
-          <button
-            onClick={handlePrint}
-            className="flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100 transition-all cursor-pointer"
-          >
-            <FileText size={15} />
-            <span>Print ATS Resume</span>
-          </button>
         </div>
       </div>
 
       {/* Subfooter */}
       <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 border-t border-slate-200/60 dark:border-slate-800/60 text-xs text-slate-500 dark:text-slate-400">
-        <p>© 2026 {RESUME_DATA.name} • Built with Next.js, React 19, Tailwind CSS &amp; Framer Motion</p>
+        <p>© 2026 {RESUME_DATA.name}</p>
         <button
           onClick={scrollToTop}
           className="flex items-center gap-1.5 text-slate-500 hover:text-blue-500 transition-colors cursor-pointer"
