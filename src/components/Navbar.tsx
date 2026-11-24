@@ -35,8 +35,8 @@ export function Navbar() {
             {RESUME_DATA.initials}
           </div>
           <div className="flex flex-col">
-            <span className="font-extrabold text-slate-900 dark:text-white text-base tracking-tight leading-tight group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-              Hruday Preetham
+            <span className="brand-name font-extrabold text-slate-900 dark:text-white text-base tracking-tight leading-tight group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+              Sri Hruday Preetham
             </span>
             <span className="text-[11px] font-semibold text-blue-600 dark:text-cyan-400 leading-tight">
               Java Full-Stack Developer

@@ -25,6 +25,28 @@ export interface Metric {
   label: string;
 }
 
+/**
+ * Dynamically computes total years of production experience from career start.
+ * Automatically updates every month without manual editing!
+ */
+export function calculateExperienceYears(careerStartDate: Date = new Date(2024, 7, 1)): string {
+  const now = new Date();
+  const months = (now.getFullYear() - careerStartDate.getFullYear()) * 12 + (now.getMonth() - careerStartDate.getMonth());
+  const years = (months / 12).toFixed(1);
+  return `${years}+`;
+}
+
+export function calculateTenure(startDate: Date = new Date(2025, 3, 1)): string {
+  const monthNames = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+  ];
+  return `${monthNames[startDate.getMonth()]} ${startDate.getFullYear()} – Present`;
+}
+
+const dynamicExpYears = calculateExperienceYears();
+const dynamicPyroTenure = calculateTenure();
+
 export const RESUME_DATA = {
   name: "Sri Hruday Preetham Perika",
   initials: "HP",
@@ -37,12 +59,13 @@ export const RESUME_DATA = {
   linkedin: "https://www.linkedin.com/in/hrudaypreetham-perika/",
   github: "https://github.com/preetham-perika",
   livePortfolio: "https://preetham-perika.github.io/hruday-preetham-portfolio/",
+  experienceYears: dynamicExpYears,
 
   summary:
-    "Java Full-Stack Developer with 1.6+ years of production experience architecting high-throughput microservices using Java 21, Spring Boot, Apache Kafka, and PostgreSQL/MySQL, paired with React.js frontend delivery. Proven track record scaling mission-critical telecom provisioning and automated GST billing engines up to 500 TPS across 10,000+ daily transactions. Experienced in cloud-native containerization (Maven Jib, AWS ECR, Kubernetes) and PRD-driven AI-assisted development (OpenCode / Antigravity CLI) to accelerate feature delivery and automated test coverage with zero critical SonarQube issues.",
+    `Java Full-Stack Developer with ${dynamicExpYears} years of production experience architecting high-throughput microservices using Java 21, Spring Boot, Apache Kafka, and PostgreSQL/MySQL, paired with React.js frontend delivery. Proven track record scaling mission-critical telecom provisioning and automated GST billing engines up to 500 TPS across 10,000+ daily transactions. Experienced in cloud-native containerization (Maven Jib, AWS ECR, Kubernetes) and PRD-driven AI-assisted development (OpenCode / Antigravity CLI) to accelerate feature delivery and automated test coverage with zero critical SonarQube issues.`,
 
   metrics: [
-    { value: "1.6+", label: "Years Production Exp." },
+    { value: dynamicExpYears, label: "Years Production Exp." },
     { value: "500", unit: "TPS", label: "Throughput Scaled" },
     { value: "10,000+", label: "Daily Transactions" },
     { value: "99.9%", label: "Inventory Consistency" },
@@ -246,7 +269,7 @@ export const RESUME_DATA = {
   experience: {
     role: "Software Engineer",
     company: "Pyro Holdings Pvt Ltd",
-    period: "April 2025 – Present",
+    period: dynamicPyroTenure,
     location: "Hyderabad, India",
     points: [
       "Engineered and maintained 5+ production microservices using Java (Java 21) and Spring Boot for high-volume telecom provisioning, SIM inventory, and automated financial billing platforms.",
