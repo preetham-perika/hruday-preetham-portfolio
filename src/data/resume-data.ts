@@ -26,13 +26,13 @@ export interface Metric {
 }
 
 /**
- * Dynamically computes total years of production experience from career start.
+ * Dynamically computes total years of production experience from career start (April 2025).
  * Automatically updates every month without manual editing!
  */
-export function calculateExperienceYears(careerStartDate: Date = new Date(2024, 7, 1)): string {
+export function calculateExperienceYears(careerStartDate: Date = new Date(2025, 3, 1)): string {
   const now = new Date();
   const months = (now.getFullYear() - careerStartDate.getFullYear()) * 12 + (now.getMonth() - careerStartDate.getMonth());
-  const years = (months / 12).toFixed(1);
+  const years = (Math.max(months, 1) / 12).toFixed(1);
   return `${years}+`;
 }
 
