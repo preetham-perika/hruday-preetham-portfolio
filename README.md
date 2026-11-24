@@ -1,80 +1,46 @@
 # 🚀 Sri Hruday Preetham Perika | Java Full-Stack Developer
 
-> **Java 21 • Spring Boot • Microservices • Apache Kafka • React.js**
+> **Java 21 • Spring Boot • Microservices • Apache Kafka • React.js • Kubernetes • AWS ECR**
 
-This repository contains my **portfolio & web resume**, showcasing end-to-end full-stack capabilities, cloud-native containerization, high-throughput microservices architecture, and modern reactive frontends.
+An interactive, high-performance **Java Full-Stack Developer Portfolio** featuring live project showcases, smooth 60fps micro-interactions, category-based skills filtering, and a **dynamic vector ATS resume generator**.
 
-🔗 **Live Portfolio Site:** [https://preetham-perika.github.io/hruday-preetham-resume/](https://preetham-perika.github.io/hruday-preetham-resume/)  
-📄 **Downloadable Resume (PDF):** [Sri_Hruday_Preetham_Perika_Java_FullStack_2026.pdf](./Sri_Hruday_Preetham_Perika_Java_FullStack_2026.pdf)
-
----
-
-## 👨‍💻 Professional Summary
-
-Java Full-Stack Developer with 1.6+ years of production experience architecting high-throughput microservices using Java 21, Spring Boot, Apache Kafka, and PostgreSQL/MySQL, paired with React.js frontend delivery. Proven track record scaling mission-critical telecom provisioning and automated GST billing engines up to 500 TPS across 10,000+ daily transactions. Experienced in cloud-native containerization (Maven Jib, AWS ECR, Kubernetes) and PRD-driven AI-assisted development (OpenCode / Antigravity CLI) to accelerate feature delivery and automated test coverage.
+🔗 **Live Portfolio Site:** [https://preetham-perika.github.io/hruday-preetham-portfolio/](https://preetham-perika.github.io/hruday-preetham-portfolio/)  
+📄 **Downloadable Resume (PDF):** [Sri_Hruday_Preetham_Perika_Java_Full_Stack_2026.pdf](./Sri_Hruday_Preetham_Perika_Java_Full_Stack_2026.pdf)
 
 ---
 
-## ⚙️ Technical Skills
+## 🌟 Key Highlights & Features
 
-- **Languages & Core:** Java (Java 21, Java 8/17), JavaScript (ES6+), SQL, HTML5, CSS3
-- **Backend & Microservices:** Spring Boot, Microservices Architecture, RESTful APIs, Spring Security, Spring Data JPA, Hibernate
-- **Frontend Development:** React.js, React Router, Axios, Context API, Responsive Web UI Design
-- **Messaging & Event Streaming:** Apache Kafka, RabbitMQ
-- **Databases & Performance Tuning:** PostgreSQL (pgAdmin 4), MySQL, SQL Query Tuning, Indexing Strategies, Transaction Management
-- **Cloud, DevOps & Build Tools:** Maven, Maven Jib, Docker, AWS ECR, Kubernetes (`kubectl` log monitoring), Git, GitLab CI/CD, Linux, SonarQube
-- **Testing & AI Engineering:** JUnit 5, Mockito, Integration Testing, Postman, OpenCode & Antigravity CLI (PRD-driven workflows)
-
----
-
-## 💼 Work Experience
-
-### Software Engineer — Pyro Holdings Pvt Ltd | Hyderabad, India
-*April 2025 – Present*
-
-- Engineered and maintained 5+ production microservices using **Java (Java 21)** and **Spring Boot** for high-volume telecom provisioning, SIM inventory, and automated financial billing platforms.
-- Scaled transactional throughput to **500 TPS** without data corruption or lock contention by refactoring service workflows, implementing fault-tolerant **Apache Kafka** consumers, and tuning **PostgreSQL** column indexing.
-- Designed RESTful APIs and **React.js** frontend modules to deliver end-to-end financial retail, approval, and subscriber management workflows.
-- Investigated production vs. client data discrepancies, authored root-cause analysis reports, and eliminated backend latency bottlenecks by **~35%** through SQL query optimization.
-- Streamlined container image builds using **Maven Jib** to push lightweight images directly to **AWS ECR** (eliminating Dockerfile overhead) and monitored live deployment health via **Kubernetes** pod logs (`kubectl logs`).
-- Leveraged PRD-driven AI workflows (**OpenCode & Antigravity CLI**) to accelerate module refactoring and build comprehensive **JUnit 5 / Mockito** unit and integration test suites with zero critical **SonarQube** issues.
+- **Dual-Mode Architecture:**
+  - **Web View:** Modern obsidian dark / clean light theme with glassmorphism, responsive cards, 1-click email copy, interactive skill filters, and quantifiable metric cards (500 TPS, 1.6+ years, 99.9% consistency).
+  - **Dynamic ATS Resume Print View:** When clicking `Download ATS Resume` or pressing `Ctrl+P`, the print engine renders a pristine, high-contrast, 2-page ATS vector PDF with 100% selectable text.
+- **Featured Projects:**
+  1. **Family WhatsApp Document & Picture Vault:** Full-stack showcase featuring **Java 21, Spring Boot 3, React.js dashboard, WhatsApp Cloud API, Docker Compose & Kubernetes**.
+  2. **BSNL Commission & Financial Retail Management System:** Enterprise full-stack system scaling to **500 TPS** with Kafka retry queues, automated GST/TDS tax engine, and time-series slab configuration.
+  3. **BSNL SIM Inventory Management Platform:** Modernized React UI with Spring Boot REST microservices, bulk Excel ingestion pipeline, and RabbitMQ event processing.
+  4. **Centralized VAS Provisioning System (CVPS):** Pure backend microservices with SMPP, SS7, MySQL, and automated SFTP CDR reconciliation.
 
 ---
 
-## 📌 Key Projects
+## 🛠️ Dynamic PDF Resume Generation
 
-### 1. BSNL Commission & Financial Retail Management System (MNP & Postpaid CAF)
-- **Scope:** Full-Stack (React.js GUI Frontend + Java 21 Backend Microservices)
-- **Tech Stack:** Java 21, Spring Boot, Microservices, Apache Kafka, PostgreSQL (pgAdmin 4), React.js, Maven Jib, AWS ECR, Kubernetes, JUnit 5, Mockito
-- **Highlights:**
-  - Built an end-to-end commission calculation, tax compliance, and GST invoicing platform (**React.js GUI + Java 21/Spring Boot backend**) for BSNL MNP and Postpaid CAF activations, automating D+1 payouts and reducing manual effort by **~95%**.
-  - Engineered registered vs. unregistered dealer tax logic (applying **CGST/SGST/IGST/UTGST** and **TDS** deductions based on state and BSNL circle) alongside a **time-series activation slab configuration table** (`effective_from`/`effective_to`), dealer discount factors, and extra volume incentives (3–5, 6–9, 10–20 activations).
-  - Scaled transaction processing to **500 TPS** across **10,000+ daily transactions** with **99.5% accuracy** using paginated batch fetching (500 records/chunk), PostgreSQL column indexing, and custom Kafka retry mechanisms.
-  - Developed role-based **React.js approval and financial retail interfaces** that integrated Kafka ERP settlement confirmation events, reducing approval turnaround from 7–10 days to 2–3 days.
+Whenever you update `index.html` or `style.css`:
 
-### 2. BSNL SIM Inventory Management System (PYOTA-USIM)
-- **Scope:** Full-Stack (Modernized React UI + Java Backend Microservices)
-- **Tech Stack:** Java, Spring Boot, Microservices, React.js, MySQL, REST APIs, RabbitMQ, Apache POI (Excel), HTML5, CSS3
-- **Highlights:**
-  - Architected and developed the modernized full-stack **BSNL SIM Inventory Management Platform (PYOTA-USIM)** featuring an intuitive **modernized React UI** paired with **Spring Boot REST microservices** (`/createImsi`, `/deleteImsi`, `/simswap`) enabling operations teams to execute digital SIM provisioning, allocation, and cross-circle IMSI swaps.
-  - Implemented an automated **bulk Excel upload and ingestion pipeline** (Apache POI) with asynchronous batch parsing and strict row-level validation (15-digit IMSI, 12-digit MSISDN, circle ID, SIM type) to block invalid inventory mutations prior to persistence.
-  - Designed an interactive **graphical analytics dashboard** in React.js for real-time visualization of SIM inventory metrics, stock quotas per circle/SSA, allocated vs. available pools, and IMSI pairing status.
-  - Engineered multi-level **MSC approval gating workflows** for high-value VIP numbers and 2G/3G-to-4G SIM upgrade requests, enforcing role-based authorization to eliminate unauthorized stock reallocation.
-  - Engineered atomic cross-circle SIM swap transactions and asynchronous **RabbitMQ** event processing, maintaining **99.9% inventory consistency** while cutting lookup/update latency by **~35%** via SQL query optimization.
+### 1. In Browser (Instant)
+Recruiters or visitors can click **"Download ATS Resume (PDF)"** to immediately open the browser print dialog and save a vector PDF generated from the live page.
 
-### 3. Centralized VAS Provisioning System (CVPS) & Consent Gateway
-- **Scope:** Backend Microservices (Pure Backend)
-- **Tech Stack:** Java, Spring Boot, REST APIs, SMPP, SS7, MySQL, SFTP
-- **Highlights:**
-  - Integrated Content Partner platforms with CVPS and Consent Gateway to orchestrate subscriber consent validation, VAS activation, auto-renewal, and fallback billing across SMS, USSD, IVR, and Web/WAP channels.
-  - Reduced billing failures by **~40%** through asynchronous callback handling and retry mechanisms, and automated daily CDR reconciliation via SFTP, cutting manual operations effort by **~60%**.
+### 2. Local CLI Script
+Run the automated build script:
+```bash
+# Using bash
+./generate-pdf.sh
 
----
+# Or using npm
+npm run build:pdf
+```
 
-## 🎓 Education & Certifications
-
-- **Bachelor of Technology (B.Tech) in Information Technology** — Anurag Group of Institutions, Hyderabad (2019 – 2023) | GPA: 7.45
-- **Certifications:** Java Skill Certification (HackerRank) *(Open for adding React & Kafka badges)*
+### 3. Automated CI/CD (GitHub Actions)
+Whenever you push changes to GitHub, `.github/workflows/generate-pdf.yml` automatically executes Chrome Headless, compiles the PDF, and commits the updated file.
 
 ---
 
@@ -84,4 +50,4 @@ Java Full-Stack Developer with 1.6+ years of production experience architecting 
 - 📧 **Email:** [hrudaypreethamperika@gmail.com](mailto:hrudaypreethamperika@gmail.com)
 - 🔗 **LinkedIn:** [https://www.linkedin.com/in/hrudaypreetham-perika/](https://www.linkedin.com/in/hrudaypreetham-perika/)
 - 💻 **GitHub:** [https://github.com/preetham-perika](https://github.com/preetham-perika)
-- 🌐 **Live Portfolio:** [https://preetham-perika.github.io/hruday-preetham-resume/](https://preetham-perika.github.io/hruday-preetham-resume/)
+- 🌐 **Live Portfolio:** [https://preetham-perika.github.io/hruday-preetham-portfolio/](https://preetham-perika.github.io/hruday-preetham-portfolio/)

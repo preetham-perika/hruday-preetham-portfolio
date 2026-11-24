@@ -1,0 +1,19 @@
+{
+  "name": "hruday-preetham-portfolio",
+  "version": "2.0.0",
+  "description": "Interactive Java Full-Stack Developer Portfolio & Dynamic Vector ATS Resume Generator",
+  "scripts": {
+    "build:pdf": "bash generate-pdf.sh",
+    "serve": "npx serve ."
+  },
+  "keywords": [
+    "java-full-stack",
+    "spring-boot",
+    "react",
+    "kafka",
+    "portfolio",
+    "resume"
+  ],
+  "author": "Sri Hruday Preetham Perika <hrudaypreethamperika@gmail.com>",
+  "license": "MIT"
+}
