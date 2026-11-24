@@ -128,7 +128,7 @@ export function Hero() {
         <div className="flex flex-wrap items-center gap-3.5 pt-3">
           {/* Direct PDF Download (Place 2 of 2) */}
           <a
-            href="/Sri_Hruday_Preetham_Perika_Java_Full_Stack_2026.pdf"
+            href="Sri_Hruday_Preetham_Perika_Java_Full_Stack_2026.pdf"
             download="Sri_Hruday_Preetham_Perika_Java_Full_Stack_2026.pdf"
             className="flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-bold bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 text-white shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 hover:-translate-y-0.5 active:translate-y-0 transition-all cursor-pointer"
             title="Download the updated 2-page ATS Resume PDF"

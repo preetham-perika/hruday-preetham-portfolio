@@ -12,7 +12,7 @@ PUBLIC_PDF="$SCRIPT_DIR/public/Sri_Hruday_Preetham_Perika_Java_Full_Stack_2026.p
 OUT_DIR="$SCRIPT_DIR/out"
 
 echo "📦 Running 'npm run build' to generate static export..."
-cd "$SCRIPT_DIR" && npm run build
+cd "$SCRIPT_DIR" && NEXT_PUBLIC_BASE_PATH="" npm run build
 
 # Find available port
 PORT=3987

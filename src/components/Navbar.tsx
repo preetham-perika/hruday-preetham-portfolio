@@ -93,7 +93,7 @@ export function Navbar() {
 
           {/* Direct Download Button */}
           <a
-            href="/Sri_Hruday_Preetham_Perika_Java_Full_Stack_2026.pdf"
+            href="Sri_Hruday_Preetham_Perika_Java_Full_Stack_2026.pdf"
             download="Sri_Hruday_Preetham_Perika_Java_Full_Stack_2026.pdf"
             className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-bold bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 text-white shadow-md shadow-blue-500/25 hover:shadow-lg hover:shadow-blue-500/40 hover:-translate-y-0.5 active:translate-y-0 transition-all cursor-pointer"
             title="Download vector ATS Resume PDF"
@@ -152,7 +152,7 @@ export function Navbar() {
             Contact
           </a>
           <a
-            href="/Sri_Hruday_Preetham_Perika_Java_Full_Stack_2026.pdf"
+            href="Sri_Hruday_Preetham_Perika_Java_Full_Stack_2026.pdf"
             download="Sri_Hruday_Preetham_Perika_Java_Full_Stack_2026.pdf"
             onClick={() => setMobileMenuOpen(false)}
             className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-xs font-semibold bg-blue-600 text-white"
