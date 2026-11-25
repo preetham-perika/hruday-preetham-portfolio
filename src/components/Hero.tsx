@@ -50,6 +50,8 @@ export function Hero() {
           <span className="text-slate-400">•</span>
           <span>Spring Boot</span>
           <span className="text-slate-400">•</span>
+          <span>Microservices</span>
+          <span className="text-slate-400">•</span>
           <span>Apache Kafka</span>
           <span className="text-slate-400">•</span>
           <span>React.js</span>

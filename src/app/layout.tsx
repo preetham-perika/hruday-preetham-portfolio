@@ -3,7 +3,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
 export const metadata: Metadata = {
-  title: "Sri Hruday Preetham Perika | Java Full-Stack Developer (Java 21 • Spring Boot • Kafka • React.js)",
+  title: "Sri Hruday Preetham Perika | Java Full-Stack Developer (Java 21 • Spring Boot • Microservices • Kafka • React.js)",
   description:
     "Java Full-Stack Developer with 1.6+ years of production experience building high-throughput Java 21, Spring Boot, Kafka microservices, and React.js web applications.",
   keywords: [

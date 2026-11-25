@@ -51,7 +51,7 @@ export const RESUME_DATA = {
   name: "Sri Hruday Preetham Perika",
   initials: "HP",
   title: "Java Full-Stack Developer",
-  coreTech: "Java 21 • Spring Boot • Apache Kafka • React.js • Kubernetes • AWS ECR",
+  coreTech: "Java 21 | 17 • Spring Boot • Microservices • Apache Kafka • React.js • Kubernetes • AWS ECR",
   location: "Hyderabad, Telangana, India",
   relocationText: "Open to Relocate (Hyderabad, Bengaluru, Chennai, Mumbai)",
   email: "hrudaypreethamperika@gmail.com",
