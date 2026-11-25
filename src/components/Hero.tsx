@@ -1,9 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion } from "framer-motion";
 import {
-  FileText,
   Check,
   Mail,
   Phone,
@@ -11,7 +9,6 @@ import {
   ArrowRight,
   Code2,
   Download,
-  Printer,
 } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "@/components/Icons";
 import { RESUME_DATA } from "@/data/resume-data";
@@ -27,10 +24,6 @@ export function Hero() {
     } catch {
       // fallback
     }
-  };
-
-  const handlePrint = () => {
-    window.print();
   };
 
   return (

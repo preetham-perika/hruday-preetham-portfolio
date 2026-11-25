@@ -23,7 +23,7 @@ export function ProfessionalSummary() {
           </strong>{" "}
           with{" "}
           <strong className="text-slate-900 dark:text-white font-semibold">
-            1.6+ years of production experience
+            {RESUME_DATA.experienceYears} years of production experience
           </strong>{" "}
           architecting high-throughput microservices using{" "}
           <strong className="text-blue-600 dark:text-blue-400 font-semibold">

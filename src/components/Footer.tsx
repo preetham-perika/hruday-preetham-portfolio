@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Mail, Phone, FileText, ArrowUp, Download } from "lucide-react";
+import { Mail, Phone, ArrowUp } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "@/components/Icons";
 import { RESUME_DATA } from "@/data/resume-data";
 
@@ -16,10 +16,6 @@ export function Footer() {
     } catch {
       // fallback
     }
-  };
-
-  const handlePrint = () => {
-    window.print();
   };
 
   const scrollToTop = () => {
